@@ -1,0 +1,256 @@
+.hero {}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__text {
+  margin: 0;
+  padding: 0;
+  font-size: 27px;
+  line-height: normal;
+  font-family: $din-pro;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $base-black;
+  margin-bottom: 15px;
+}
+
+.hero__main-text {
+  position: relative;
+  z-index: -1;
+  font-size: 109px;
+  margin: 0;
+  line-height: 117px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $secondary-black;
+  margin-bottom: 128px;
+}
+
+.hero__bold-text {
+  font-weight: 800;
+}
+
+.hero__button {
+  position: absolute;
+  font-family: $din-pro;
+  right: 106px;
+  bottom: 15px;
+  width: 288px;
+  font-size: 27px;
+  text-align: center;
+  border: 2px solid $base-white;
+  padding: 24px 35px 25px 73px;
+  background: $button-color;
+  cursor: pointer;
+  letter-spacing: 1.62px;
+  line-height: 105%;
+  border-radius: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 48px;
+    border-radius: 100px;
+    background-color: $secondary-black;
+    top: 14px;
+    left: 15px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 19px;
+    height: 14px;
+    left: 31px;
+    top: 31px;
+    background: url("../../icons/stack.svg#arrow");
+  }
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hero__item {
+  background-repeat: no-repeat;
+  position: absolute;
+
+  &:nth-child(1) {
+    top: 76px;
+    left: 0;
+    width: 126px;
+    height: 116px;
+    background-image: url("../../images/bacterium-1.png");
+  }
+
+  &:nth-child(2) {
+    top: 60px;
+    right: 220px;
+    width: 63px;
+    height: 58px;
+    background-image: url("../../images/bacterium-2.png");
+    animation: triangle 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &:nth-child(3) {
+    top: 207px;
+    right: 59px;
+    width: 111px;
+    height: 114px;
+    background-image: url("../../images/bacterium-3.png");
+    animation: circle 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+
+  &:nth-child(4) {
+    bottom: 0;
+    right: 244px;
+    width: 228px;
+    height: 127px;
+    background-image: url("../../images/bacterium-4.png");
+    animation: approximation 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &:nth-child(5) {
+    bottom: 183px;
+    z-index: 0;
+    left: 26px;
+    width: 74px;
+    height: 72px;
+    background-image: url("../../images/bacterium-5.png");
+    animation: vertical-triangle 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &:nth-child(6) {
+    bottom: 42px;
+    left: 346px;
+    width: 85px;
+    height: 78px;
+    background-image: url("../../images/bacterium-6.png");
+  }
+
+  &:nth-child(7) {
+    top: 30px;
+    right: 48px;
+    width: 71px;
+    height: 69px;
+    background-image: url("../../images/bacterium-7.png");
+  }
+
+  &:nth-child(8) {
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: 175px;
+    background-image: url("../../images/pink-sperm-2.png");
+  }
+
+  &:nth-child(9) {
+    top: 165px;
+    right: 0;
+    z-index: 1;
+    width: 592px;
+    height: 93px;
+    background-image: url("../../images/pink-sperm.png");
+  }
+}
+
+@keyframes triangle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  40% {
+    transform: translateX(15px) translateY(10px);
+  }
+
+  70% {
+    transform: translateX(0) translateY(10px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(-115px) translateY(-80px) rotate(-25deg);
+  }
+
+  50% {
+    transform: translateX(-95px) translateY(-120px) rotate(-55deg);
+  }
+
+  80% {
+    transform: translateX(25px) translateY(25px) rotate(-90deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(-110deg);
+  }
+}
+
+@keyframes vertical-triangle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+
+  50% {
+    transform: translateX(15px) translateY(25px);
+  }
+
+  75% {
+    transform: translateX(0) translateY(25px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes approximation {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+
+  25% {
+    transform: translateX(-13px) translateY(-13px) scale(1.2);
+  }
+
+  50% {
+    transform: translateX(-25px) translateY(0) scale(1);
+  }
+
+  75% {
+    transform: translateX(-13px) translateY(-13px) scale(1.2);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}

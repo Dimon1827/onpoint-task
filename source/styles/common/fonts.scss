@@ -1,1 +1,6 @@
 /* здесь подключите шрифты */
+@include font-face("Din-pro", 400, url("../../fonts/DINPro.woff2"));
+@include font-face("Gilroy", 300, url("../../fonts/Gilroy-Light.woff2"));
+@include font-face("Gilroy", 400, url("../../fonts/Gilroy-Regular.woff2"));
+@include font-face("Gilroy", 800, url("../../fonts/Gilroy-Extrabold.woff2"));
+@include font-face("Myriad", 400, url("../../fonts/MyriadPro-Regular.woff2"));
