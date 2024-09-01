@@ -4,11 +4,21 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/container.scss";
-
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/footer.scss";
 @import "./blocks/page.scss";
+@import "./blocks/about-container.scss";
+@import "./blocks/button.scss";
 @import "./blocks/main-container.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/about.scss";
+@import "./blocks/title.scss";
+@import "./blocks/name.scss";
+@import "./blocks/service.scss";
+@import "./blocks/modal.scss";
+@import "./blocks/slider-pagination.scss";
+@import "./blocks/slider-button-prev.scss";
+@import "./blocks/slider-button-next.scss";

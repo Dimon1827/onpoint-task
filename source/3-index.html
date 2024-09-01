@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Название проекта</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preload" href="#" type="font/woff2" as="font" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/index.js" defer></script>
+  </head>
+  <body class="page__body">
+    <div class="page__container">
+      <header class="header">
+        <div class="container">
+          <img
+            class="header__image"
+            src="images/header-logo.svg"
+            width="153"
+            height="26"
+            alt="Главная"
+          />
+        </div>
+      </header>
+      <main class="main-container">
+        <div class="service">
+          <div class="container">
+            <h2 class="service__title title">Ключевое сообщение</h2>
+            <p class="service__name name">
+              Brend<span class="service__bold-name">XY</span>
+            </p>
+            <div class="service__wrapper">
+              <div class="service__left">
+                <p class="service__text">
+                  Ehicula ipsum a arcu cursus vitae. Eu non diam phasellus
+                  vestibulum lorem sed risus ultricies
+                </p>
+              </div>
+              <div class="service__right">
+                <div class="service__subject">
+                  <p class="service__text">A arcu cursus vitae</p>
+                </div>
+                <div class="service__button button" type="button">
+                  Подробнее
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="images/bottle-2.png"
+            alt="Спрей"
+            class="service__image"
+            width="333"
+            height="768"
+          />
+          <ul class="service__list">
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+            <li class="service__item"></li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <img
+            class="footer__image"
+            src="images/footer-logo.svg"
+            width="58"
+            height="12"
+            alt="Лого Onpoint"
+          />
+        </div>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__wrapper">
+        <button class="modal__button-close">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <h2 class="modal__title title">Преимущества</h2>
+        <p class="modal__name name">
+          Brend<span class="modal__bold-name">XY</span>
+        </p>
+        <div class="slider-pagination">
+          <div class="slider-pagination__wrapper" data-slider="true">
+            <button
+              class="slider-pagination__button slider-button-prev"
+              type="button"
+              data-button="prev"
+            >
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button
+              class="slider-pagination__button slider-button-next"
+              type="button"
+              data-button="next"
+            >
+              <span class="visually-hidden">Вперед</span>
+            </button>
+            <ul class="slider-pagination__slides" data-slides="0">
+              <li
+                class="slider-pagination__slide"
+                data-active="true"
+                data-id="0"
+              >
+                <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">01</div>
+                  <p class="slider-pagination__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </p>
+                </div>
+                <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">02</div>
+                  <p class="slider-pagination__text">
+                    Faucibus pulvinar elementum integer enim
+                  </p>
+                </div>
+                <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">03</div>
+                  <p class="slider-pagination__text">
+                    Faucibus pulvinar elementum integer enim
+                  </p>
+                </div>
+              </li>
+              <li
+                class="slider-pagination__slide visually-hidden"
+                data-id="1"
+              >
+            <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">04</div>
+                  <p class="slider-pagination__text">
+                    Mi bibendum neque egestas congue quisque  egestas diam
+                  </p>
+                </div>
+                <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">05</div>
+                  <p class="slider-pagination__text">
+                    Venenatis lectus magna fringilla urna
+                  </p>
+                </div>
+                <div class="slider-pagination__inner">
+                  <div class="slider-pagination__number">06</div>
+                  <p class="slider-pagination__text">
+                    Venenatis lectus magna fringilla urna
+                  </p>
+                </div></li>
+            </ul>
+            <div class="slider-pagination__dots">
+              <button
+                class="slider-pagination__dot slider-pagination__dot--active"
+                type="button"
+                data-id="0"
+              >
+                <span class="visually-hidden">1 кнопка слайдера</span>
+              </button>
+              <button class="slider-pagination__dot" type="button" data-id="1">
+                <span class="visually-hidden">2 кнопка слайдера</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -35,41 +35,9 @@
 }
 
 .hero__button {
-  position: absolute;
-  font-family: $din-pro;
   right: 106px;
-  bottom: 15px;
-  width: 288px;
-  font-size: 27px;
-  text-align: center;
-  border: 2px solid $base-white;
-  padding: 24px 35px 25px 73px;
-  background: $button-color;
-  cursor: pointer;
-  letter-spacing: 1.62px;
-  line-height: 105%;
-  border-radius: 40px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 48px;
-    border-radius: 100px;
-    background-color: $secondary-black;
-    top: 14px;
-    left: 15px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 19px;
-    height: 14px;
-    left: 31px;
-    top: 31px;
-    background: url("../../icons/stack.svg#arrow");
-  }
+  bottom: 16px;
+  border: none;
 }
 
 .hero__list {
