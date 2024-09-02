@@ -1,11 +1,1 @@
-// source/scripts/modal.js
-var closeButton = document.querySelector(".modal__button-close");
-var openButton = document.querySelector(".service__button");
-var modal = document.querySelector(".modal");
-closeButton.addEventListener("click", () => {
-  modal.classList.toggle("modal__open");
-});
-openButton.addEventListener("click", () => {
-  modal.classList.toggle("modal__open");
-});
-//# sourceMappingURL=modal.js.map
+var o=document.querySelector(".modal__button-close"),t=document.querySelector(".service__button"),e=document.querySelector(".modal");o.addEventListener("click",()=>{e.classList.toggle("modal__open")});t.addEventListener("click",()=>{e.classList.toggle("modal__open")});

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["source/scripts/modal.js"],
-  "sourcesContent": ["const closeButton = document.querySelector('.modal__button-close');\nconst openButton = document.querySelector('.service__button');\nconst modal = document.querySelector('.modal');\n\ncloseButton.addEventListener('click', () => {\n  modal.classList.toggle('modal__open');\n});\n\nopenButton.addEventListener('click', () => {\n  modal.classList.toggle('modal__open');\n});\n\n"],
-  "mappings": ";AAAA,IAAM,cAAc,SAAS,cAAc,sBAAsB;AACjE,IAAM,aAAa,SAAS,cAAc,kBAAkB;AAC5D,IAAM,QAAQ,SAAS,cAAc,QAAQ;AAE7C,YAAY,iBAAiB,SAAS,MAAM;AAC1C,QAAM,UAAU,OAAO,aAAa;AACtC,CAAC;AAED,WAAW,iBAAiB,SAAS,MAAM;AACzC,QAAM,UAAU,OAAO,aAAa;AACtC,CAAC;",
-  "names": []
-}
