@@ -1,8 +1,9 @@
 .header {
-
+  position: fixed;
+  z-index: 99;
+  cursor: pointer;
 }
 
 .header__image {
-  // margin-bottom: 108px;
-  margin-bottom: 57px;
+  margin-top: 30px;
 }

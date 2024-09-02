@@ -1,0 +1,1 @@
+var o=document.querySelector(".modal__button-close"),t=document.querySelector(".service__button"),e=document.querySelector(".modal");o.addEventListener("click",()=>{e.classList.toggle("modal__open")});t.addEventListener("click",()=>{e.classList.toggle("modal__open")});

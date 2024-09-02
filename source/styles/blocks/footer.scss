@@ -1,6 +1,9 @@
 .footer {
+  position: fixed;
+  z-index: 99;
+
   &__image {
     position: relative;
-    z-index: 99;
+    bottom: 30px;
   }
 }

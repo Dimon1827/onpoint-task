@@ -1,4 +1,14 @@
-.about {}
+.about {
+  background-image: url("../../images/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__container {
+  padding-top: 134px;
+  position: relative;
+  z-index: 1;
+}
 
 .about__title {
   margin: 0;
@@ -14,14 +24,14 @@
 
 .about__wrapper {
   position: relative;
-  margin-left: 100px;
+  margin-left: 52px;
   margin-bottom: 60px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .about__text-wrapper {
   position: relative;
-  width: 725px;
+  width: 775px;
   height: 445px;
   padding: 33px 56px 0 36px;
   border-radius: 40px;
@@ -41,8 +51,9 @@
 
 .about__toddler-wrapper {
   position: absolute;
+  z-index: 1;
   cursor: pointer;
-  left: -89px;
+  left: -42px;
   bottom: 5px;
   top: 5px;
   width: 5px;
@@ -57,8 +68,6 @@
   width: 20px;
   border-radius: 10px;
   background: linear-gradient(150deg, #cf578d 10%, rgb(255, 255, 255) 100%);
-
-  //background: linear-gradient(to bottom right, #cf578d 47%, #ffffff 89%);
 }
 
 .about__list {
@@ -70,22 +79,24 @@
 .about__item {
   background-repeat: no-repeat;
   position: absolute;
+  -webkit-user-drag: none;
+  user-select: none;
+  z-index: 0;
 
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3),
   &:nth-child(4),
   &:nth-child(5) {
-    top: 4px;
+    top: 50px;
     opacity: 0;
     left: 100px;
     width: 1024px;
     height: 768px;
-    z-index: 0;
   }
 
   &:nth-child(1) {
-    top: -6px;
+    top: 40px;
     left: 111px;
     background-image: url("../../images/pink-sperm-1.png");
   }

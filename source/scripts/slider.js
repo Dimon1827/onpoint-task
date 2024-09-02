@@ -1,58 +1,57 @@
-const buttons = document.querySelectorAll("[data-button]");
-const dots = document.querySelectorAll(".slider-pagination__dot");
-const points = document.querySelector(".slider-pagination__dots");
-const sliderPagination = document.querySelector(".slider-pagination");
-const slides = sliderPagination.querySelector(".slider-pagination__slides");
+const wrapper = document.querySelector('.main-container');
+const header = document.querySelector('.header');
+const heroButton = document.querySelector('.hero__button');
+const aboutList = document.querySelectorAll('.about__item');
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const direction = button.dataset.button === "next" ? 1 : -1;
-    const activeSlide = slides.querySelector("[data-active]");
-    const activeDot = points.querySelector(".slider-pagination__dot--active");
-    const newActiveSlide =
-      [...slides.children].indexOf(activeSlide) + direction;
-    const newActiveDot = [...points.children].indexOf(activeDot) + direction;
-    if (newActiveSlide <= 0 && direction === -1) {
-      button.disabled = true;
-    }
-    if (newActiveSlide >= slides.children.length && direction === 1) {
-      button.disabled = true;
-    }
-    if (newActiveSlide >= 0 && newActiveSlide < slides.children.length) {
-      dots.forEach((el) => {
-        el.classList.remove("slider-pagination__dot--active");
-      });
-      points.children[newActiveDot].classList.add(
-        "slider-pagination__dot--active"
-      );
-      slides.children[newActiveSlide].dataset.active = true;
-      slides.children[newActiveSlide].classList.remove("visually-hidden");
-      activeSlide.classList.add("visually-hidden");
-      delete activeSlide.dataset.active;
-    }
-    button.disabled = false;
+let pressed = false;
+let startX = 0;
+let change;
+
+const createAnimation = () => {
+  aboutList.forEach((element) => {
+    element.style.animation = 'first-swim 3s linear forwards';
+    element.style.webkitAnimation = 'first-swim 3s linear forwards';
   });
+  aboutList[2].style.animation = 'first-swim 2.5s linear 0.5s forwards';
+  aboutList[3].style.animation = 'first-swim 2.3s linear 0.7s forwards';
+  aboutList[4].style.animation = 'first-swim 2.3s linear 0.7s forwards';
+};
+
+wrapper.addEventListener('mousedown', (e) => {
+  pressed = true;
+  startX = e.clientX;
 });
 
-dots.forEach((dot) => {
-  dot.addEventListener("click", (evt) => {
-    const numberDot = Number(
-      evt.target.closest(".slider-pagination__dot").dataset.id
-    );
-    const activeSlide = slides.querySelector("[data-active]");
-    slides.children[numberDot].dataset.active = true;
-    slides.children[numberDot].classList.remove("visually-hidden");
-    dots.forEach((el) => {
-      el.classList.remove("slider-pagination__dot--active");
-    });
-    dot.classList.add("slider-pagination__dot--active");
-    const NumberSlide = Number(activeSlide.dataset.id);
-    if (NumberSlide === numberDot) {
-      dot.disabled = true;
-    } else {
-      activeSlide.classList.add("visually-hidden");
-      delete activeSlide.dataset.active;
-    }
-    dot.disabled = false;
-  });
+wrapper.addEventListener('mouseleave', () => {
+  pressed = false;
+});
+
+
+wrapper.addEventListener('mouseup', (e) => {
+  pressed = false;
+  e.preventDefault;
+  const touch = e.clientX;
+  change = startX - touch;
+
+  if (change > 0) {
+    wrapper.scrollLeft += 1024;
+  } else if (change < 0) {
+    wrapper.scrollLeft -= 1024;
+  }
+});
+
+
+wrapper.addEventListener('mousemove', () => {
+  if (!pressed) {
+    return;
+  }
+});
+
+header.addEventListener('click', () => {
+  wrapper.scrollLeft = 0;
+});
+
+heroButton.addEventListener('click', () => {
+  createAnimation();
+  wrapper.scrollLeft = 1024;
 });

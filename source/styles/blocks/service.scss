@@ -1,4 +1,12 @@
-.service {}
+.service {
+  background-image: url("../../images/bg-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service__container {
+  padding-top: 156px;
+}
 
 .service__name {
   margin-bottom: 110px;
@@ -6,7 +14,6 @@
 }
 
 .service__title {
-  margin-top: 38px;
   margin-left: 292px;
   margin-bottom: 47px;
 }
@@ -54,9 +61,8 @@
   color: #2e2e2e;
   line-height: 111%;
   margin: 0;
+  font-weight: 400;
 }
-
-.service__right {}
 
 .service__subject {
   background-color: $base-white;
@@ -90,6 +96,7 @@
 
 .service__button {
   width: 273px;
+  font-weight: 400;
 
   &::after {
     width: 13px;
